@@ -26,18 +26,7 @@ namespace Exercise.Entities
 
         public bool IsValid()
         {
-            if (BillingAddress?.Street != null)
-            {
-                if (DeliveryAddress?.Street != null)
-                {
-                    if (Person?.Name != null)
-                    {
-                        return true;
-                    }
-                }
-            }
-
-            return false;
+            return BillingAddress?.Street != null && DeliveryAddress?.Street != null && Person?.Name != null;
         }
     }
 }
